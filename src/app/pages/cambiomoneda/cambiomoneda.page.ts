@@ -7,7 +7,6 @@ import { DivisaService } from 'src/app/services/divisa.service';
   styleUrls: ['./cambiomoneda.page.scss'],
 })
 
-//export class CambiomonedaPage implements OnInit {
 export class CambiomonedaPage {
   
   tipo_moneda;
@@ -26,81 +25,12 @@ export class CambiomonedaPage {
   constructor(private divisaServicio: DivisaService) { 
    // this.obtenerDivisa();
   }
-/*
-  obtenerDivisa(){
-    this.divisaServicio.obtenerUF()
-      .then(respuesta => {
-        console.log(respuesta);
-        this.divisa = respuesta.serie;
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  };
-*/
- /*
-getMoneda(tipo_cambio: string, fecha: string){
-    this.divisaServicio.getCambio(tipo_cambio,fecha)
-      .then(respuesta => {
-        console.log(respuesta);
-        this.divisa = respuesta.serie;
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-
-  };
-*/
-  /*
-  getMoneda(tipo_cambio: string, fecha: string){
-    this.divisaServicio.getCambio(tipo_cambio,fecha)
-    .subscribe(
-    res => {
-      console.log(res);
-      this.divisa = res
-    },
-    err => console.log(err)
-    )
-  }*/
 
   ngOnInit() {
     this.cambioMoneda();
     }
 
-/*
-Metodo para Formulario
-*/ 
-/*
-  submitDivisa(valorPesos: HTMLInputElement, fecha: HTMLInputElement, tipo_moneda: string){
-      console.log(fecha.value)
-      console.log(tipo_moneda)
-      this.getMoneda("uf",fecha.value)
 
-    return false;
-  }
-  submitUF(){
-      if (this.uf) {
-        5000 * 30000;
-     }
-     else {
-        50000 * 828
-     }
-    
-     this.tipo_moneda="uf"
-      console.log(this.tipo_moneda)
-     this.submitDivisa;
-      return false;
-  }
-
-  submitDolar(valorPesos: HTMLInputElement, fecha: HTMLInputElement){
-      console.log(fecha.value)
-      this.getMoneda("dolar",fecha.value)
- 
-    return false;
-  }
-*/
 
  async cambioMoneda(){
   this.divisaServicio.getMoneda()
