@@ -1,0 +1,33 @@
+<ion-header>
+  <custom-header class="btn_back">
+    <ion-buttons class="btn_back" slot="start">
+      <ion-back-button></ion-back-button>
+     </ion-buttons>
+    <app-header [pageTitle]="pageTitle"></app-header> 
+  </custom-header>
+</ion-header>
+
+<ion-content padding class="background_cambio" id="content-cambio">
+<ion-grid>
+  <ion-row >
+    <ion-col size="6" class="box_cambio">
+      <ion-label>$ a USD</ion-label>
+      <ion-input type="number" [(ngModel)]="fromVal1" class="value-input" placeholder="$" (keyup)="dePeso()"></ion-input>
+    </ion-col>
+    <ion-col size="6" class="box_cambio">
+        <ion-label>USD a $</ion-label>
+        <ion-input type="number" [(ngModel)]="toVal1" class="value-input" placeholder="USD" (keyup)="aDolar()"></ion-input>
+    </ion-col>
+    <ion-col size="6" class="box_cambio">
+      <ion-label>$ a EU</ion-label>
+      <ion-input type="number" [(ngModel)]="fromVal2" class="value-input" placeholder="$" (keyup)="dePeso2()"></ion-input>
+    </ion-col>
+    <ion-col size="6" class="box_cambio">
+      <ion-label>EU a $</ion-label>
+      <ion-input type="number" [(ngModel)]="toVal2" class="value-input" placeholder="Euro" (keyup)="aEuro()"></ion-input>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>
+
+</ion-content>
