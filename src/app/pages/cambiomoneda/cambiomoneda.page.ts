@@ -23,7 +23,6 @@ export class CambiomonedaPage {
   euro:any;
 
   constructor(private divisaServicio: DivisaService) { 
-   // this.obtenerDivisa();
   }
 
   ngOnInit() {
